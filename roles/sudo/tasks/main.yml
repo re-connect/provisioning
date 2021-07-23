@@ -1,0 +1,6 @@
+---
+- name: Install sudo if not there
+  raw: |
+    test -e /usr/bin/sudo || apt install -y sudo
+  register: output
+  changed_when: output.stdout|trim() != ""

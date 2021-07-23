@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  vars:
+    gs_fonts_install: true
+  roles:
+    - role: kh-eek-ghostscript

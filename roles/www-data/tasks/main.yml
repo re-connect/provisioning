@@ -1,0 +1,24 @@
+---
+- name: update www-data shell
+  user:
+    name: www-data
+    shell: /bin/bash
+    home: /var/www
+
+- name: Creates a .ssh directory for user www-data
+  file:
+    path: /var/www/.ssh
+    state: directory
+
+- name: Copy ssh authorisation to www-data
+  shell: |
+    cat ~/.ssh/authorized_keys >> /var/www/.ssh/authorized_keys
+
+- name: set correct permissions for ssh dir
+  file:
+    path: /var/www/
+    owner: www-data
+    group: www-data
+    mode: 0700
+    state: directory
+    recurse: yes

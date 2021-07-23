@@ -1,0 +1,16 @@
+---
+- openssh_keypair:
+    path: "/var/www/.ssh/{{ssh_key_filename}}"
+    type: ed25519
+    state: present
+    force: no
+
+- ansible.builtin.file:
+    path: /var/www/.ssh/{{ssh_key_filename}}
+    owner: www-data
+    group: www-data
+
+- ansible.builtin.file:
+    path: /var/www/.ssh/{{ssh_key_filename}}.pub
+    owner: www-data
+    group: www-data

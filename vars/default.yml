@@ -1,0 +1,13 @@
+ansible_ssh_user: root
+certbot_auto_renew: false
+php_version: '8.0'
+php_enable_php_fpm: true
+php_enable_webserver: false
+php_date_timezone: Europe/Paris
+php_memory_limit: "1024M"
+php_packages_state: latest
+php_packages_extra:
+  - php-zip
+  - php-intl
+  - php-imagick
+nginx_remove_default_vhost: true

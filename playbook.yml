@@ -1,0 +1,22 @@
+---
+- hosts: default
+  vars: 
+    ansible_python_interpreter: python3
+  vars_files:
+    - vars/default.yml
+  roles:  
+    - roles/ghostscript
+    - library/geerlingguy.git
+    - library/geerlingguy.php-versions
+    - library/geerlingguy.mysql
+    - library/geerlingguy.php-mysql
+    - library/manala.cron
+    - library/geerlingguy.nginx
+    - library/geerlingguy.composer
+    - library/geerlingguy.certbot
+    - library/geerlingguy.nodejs
+    - roles/www-data
+    - roles/imagick
+    - roles/ssh-key
+    - roles/gitlab
+    - roles/python-certbot-nginx

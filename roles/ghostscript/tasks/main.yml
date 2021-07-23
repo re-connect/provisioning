@@ -1,0 +1,24 @@
+---
+- name: Ensure ghostscript is installed (RedHat).
+  package:
+    name: "{{ ghostscript_packages }}"
+    state: present
+    enablerepo: "{{ ghostscript_enablerepo | default(omit, true) }}"
+  when:
+    - not ghostscript_install_from_source | bool
+    - ansible_os_family == 'RedHat'
+
+- name: Update apt cache (Debian).
+  apt: update_cache=true cache_valid_time=86400
+  when: ansible_os_family == 'Debian'
+
+- name: Ensure ghostscript is installed (Debian).
+  apt:
+    name: "{{ ghostscript_packages }}"
+    state: present
+  when:
+    - not ghostscript_install_from_source | bool
+    - ansible_os_family == 'Debian'
+
+- import_tasks: install-from-source.yml
+  when: ghostscript_install_from_source | bool

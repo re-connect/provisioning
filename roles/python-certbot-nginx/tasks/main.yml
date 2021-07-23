@@ -1,0 +1,24 @@
+---
+- name: Ensure python_certbot_nginx is installed (RedHat).
+  package:
+    name: "{{ python_certbot_nginx_packages }}"
+    state: present
+    enablerepo: "{{ python_certbot_nginx_enablerepo | default(omit, true) }}"
+  when:
+    - not python_certbot_nginx_install_from_source | bool
+    - ansible_os_family == 'RedHat'
+
+- name: Update apt cache (Debian).
+  apt: update_cache=true cache_valid_time=86400
+  when: ansible_os_family == 'Debian'
+
+- name: Ensure python_certbot_nginx is installed (Debian).
+  apt:
+    name: "{{ python_certbot_nginx_packages }}"
+    state: present
+  when:
+    - not python_certbot_nginx_install_from_source | bool
+    - ansible_os_family == 'Debian'
+
+- import_tasks: install-from-source.yml
+  when: python_certbot_nginx_install_from_source | bool

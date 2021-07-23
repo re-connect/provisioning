@@ -1,0 +1,15 @@
+---
+# defaults file for liferay-ext-services
+gs_major_version: 9
+gs_minor_version: 21
+gs_archive: "ghostscript-{{ gs_major_version }}.{{ gs_minor_version }}"
+gs_archive_checksum: sha256:02bceadbc4dddeb6f2eec9c8b1623d945d355ca11b8b4df035332b217d58ce85
+
+gs_download_url: "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ gs_major_version }}{{ gs_minor_version }}/{{ gs_archive }}.tar.gz"
+
+gs_archive_dir: "/tmp/{{ gs_archive }}.tar.gz"
+gs_unarchive_dir: "/tmp"
+
+gs_fonts_install: false
+gs_fonts_download_url: "https://nchc.dl.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz"
+gs_fonts_archive: ghostscript-fonts-std-8.11.tar.gz

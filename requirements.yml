@@ -1,0 +1,13 @@
+roles:
+  - geerlingguy.git
+  - manala.make
+  - geerlingguy.php-versions
+  - geerlingguy.mysql
+  - geerlingguy.php-mysql
+  - manala.cron
+  - geerlingguy.nginx
+  - geerlingguy.composer
+  - geerlingguy.certbot
+  - geerlingguy.nodejs
+  - oefenweb.yarn
+  - kh-eek.ghostscript
