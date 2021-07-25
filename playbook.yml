@@ -16,6 +16,7 @@
     - library/geerlingguy.composer
     - library/geerlingguy.certbot
     - library/geerlingguy.nodejs
+    - library/oefenweb.yarn
     - roles/www-data
     - roles/imagick
     - roles/ssh-key
