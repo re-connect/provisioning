@@ -1,8 +1,7 @@
-mysql_databases:
-  - name: db_pro
 nginx_vhosts:
   - listen: "80"
-    server_name: "preprod.pro.reconnect.fr www.preprod.pro.reconnect.fr"
+    # server_name: "preprod.pro.reconnect.fr www.preprod.pro.reconnect.fr"
+    server_name: "new.preprod.pro.reconnect.fr"
     filename: "rp.conf"
     root: "/var/www/rp/current/public"
     state: "present"

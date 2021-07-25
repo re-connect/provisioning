@@ -9,6 +9,7 @@
     - library/geerlingguy.git
     - library/geerlingguy.php-versions
     - library/geerlingguy.mysql
+    - library/geerlingguy.php
     - library/geerlingguy.php-mysql
     - library/manala.cron
     - library/geerlingguy.nginx
