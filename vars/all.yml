@@ -6,10 +6,3 @@ php_date_timezone: Europe/Paris
 php_memory_limit: "1024M"
 php_packages_state: latest
 nginx_remove_default_vhost: true
-php_packages_extra:
-  - php-zip
-  - php-intl
-  - php-imagick
-  - php7.4-zip
-  - php7.4-intl
-  - php7.4-imagick

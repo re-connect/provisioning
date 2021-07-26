@@ -1,3 +1,7 @@
 ---
 php_version: '7.4'
 site_name: vault
+php_packages_extra:
+  - php7.4-zip
+  - php7.4-intl
+  - php7.4-imagick
