@@ -17,8 +17,8 @@
     - library/geerlingguy.certbot
     - library/geerlingguy.nodejs
     - library/oefenweb.yarn
+    - roles/python-certbot-nginx
     - roles/www-data
     - roles/imagick
-    - roles/ssh-key
     - roles/gitlab
-    - roles/python-certbot-nginx
+    - roles/ssh-key

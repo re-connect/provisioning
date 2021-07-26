@@ -50,7 +50,7 @@ To deploy a Symfony app, you need a few things setup before, such as EasyDeployB
 * Fill its IP address in the `envs/{website}/{env}/hosts` file corresponding to `{website}` and `{env}` you want to deploy (for example `envs/pro/preprod/hosts`)
 * Check that the php version in the `all/group_vars/default.yml` is correct (8.0 for pro, 7.4 for vault)
 * Launch the provisioning: `ansible-playbook -i envs/{website}/{environment} --vault-password-file=.vault_pass`
-* SSH to the server as `www-data` (`ssh www-data@{ip}`) and copy the ssh key genreated under `~/.ssh/id_ed25519.pub`
+* At the end of the provisioning, it should output the generated SSH key (something like `    "msg": "{ssh_key_content}"`)
 * Paste this SSH key as a new item inside the `Settings/Repository/Deploy Keys` menu on gitlab
 * As `www-data` user, Create a directory `~/{website}/shared`, and inside a file `.env`, and fill it with the necessary env variables
 * Find a way to get a database dump (scp from the current server), and send it to the server `scp ./dump.sql www-data@{ip}`
