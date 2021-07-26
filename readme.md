@@ -46,7 +46,6 @@ ansible-playbook -i envs/{website}/{environment} --vault-password-file=.vault_pa
 To deploy a Symfony app, you need a few things setup before, such as EasyDeployBundle, and an access to the project on gitlab
 
 * ‼️‼️ If you plan to switch a DNS to another DNS, update its TTL to 300 at least one day before ‼️‼️
-
 * Spawn a Debian 10 machine in the Cloud, and be sure you have SSH access as a `root` user to the machine, and get its IP address `{ip}`
 * Fill its IP address in the `envs/{website}/{env}/hosts` file corresponding to `{website}` and `{env}` you want to deploy (for example `envs/pro/preprod/hosts`)
 * Check that the php version in the `all/group_vars/default.yml` is correct (8.0 for pro, 7.4 for vault)
@@ -64,5 +63,4 @@ You can then test if your setup is working, and if you find no problem, you can 
 * Monitor your DNS switch here : [https://dnschecker.org/](https://dnschecker.org/)
 * When all (or most of ) DNS are switched to the new IP, login to your server as `root` trigger SSL certificates generation `certbot --nginx`.
 * When you are asked, anwser `(2) Redirect` to generate Nginx configuration to handle http->https redirection
-
 * ‼️‼️ This setup does not include how to handle buckets, if you follow this, point to the old buckets if they exist ‼️‼️
