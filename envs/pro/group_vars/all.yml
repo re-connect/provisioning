@@ -1,0 +1,4 @@
+---
+php_version: '8.0'
+site_name: pro
+dotenv_file_template: "templates/.env.pro.preprod"

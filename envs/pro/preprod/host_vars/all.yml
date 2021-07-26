@@ -2,8 +2,8 @@ nginx_vhosts:
   - listen: "80"
     # server_name: "preprod.pro.reconnect.fr www.preprod.pro.reconnect.fr"
     server_name: "new.preprod.pro.reconnect.fr"
-    filename: "rp.conf"
-    root: "/var/www/rp/current/public"
+    filename: "pro.conf"
+    root: "/var/www/pro/current/public"
     state: "present"
     template: "{{ nginx_vhost_template }}"
     extra_parameters: |
@@ -22,5 +22,5 @@ nginx_vhosts:
       location ~ \.php$ {
           return 404;
       }
-    access_log: "/var/log/nginx/rp_access.log"
-    error_log: "/var/log/nginx/rp_error.log"
+    access_log: "/var/log/nginx/pro_access.log"
+    error_log: "/var/log/nginx/pro_error.log"
