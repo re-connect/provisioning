@@ -40,6 +40,7 @@ ansible-playbook -i envs/{website} --limit '{environment}' --vault-password-file
 * Ssh key generation, this can be used as a deploy key
 * Add gitlab.com to known hosts
 * Conpatibility with certbot and nginx
+* Already filled dotenv files for all platforms
 
 ## First deployment
 
