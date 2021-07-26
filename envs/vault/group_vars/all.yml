@@ -1,4 +1,3 @@
 ---
 php_version: '7.4'
 site_name: vault
-dotenv_file_template: "templates/.env.vault.preprod"

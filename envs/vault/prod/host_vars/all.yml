@@ -1,9 +1,8 @@
 ---
-dotenv_file_template: "templates/.env.vault.preprod"
+dotenv_file_template: "templates/.env.vault.prod"
 nginx_vhosts:
   - listen: "80"
-    server_name: "new.preprod.reconnect.fr"
-    # server_name: "preprod.reconnect.fr www.preprod.reconnect.fr"
+    server_name: "reconnect.fr www.reconnect.fr reconnect.social www.reconnect.social"
     filename: "vault.conf"
     root: "/var/www/vault/current/public"
     state: "present"
