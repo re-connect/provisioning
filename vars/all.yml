@@ -1,8 +1,9 @@
+ansible_python_interpreter: python3
 ansible_ssh_user: root
 certbot_auto_renew: false
+nginx_remove_default_vhost: true
+php_date_timezone: Europe/Paris
 php_enable_php_fpm: true
 php_enable_webserver: false
-php_date_timezone: Europe/Paris
 php_memory_limit: "1024M"
 php_packages_state: latest
-nginx_remove_default_vhost: true
