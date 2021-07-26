@@ -1,9 +1,7 @@
----
-dotenv_file_template: "templates/.env.pro.preprod"
+dotenv_file_template: "templates/.env.pro.prod"
 nginx_vhosts:
   - listen: "80"
-    # server_name: "preprod.pro.reconnect.fr www.preprod.pro.reconnect.fr"
-    server_name: "new.preprod.pro.reconnect.fr"
+    server_name: "pro.reconnect.fr www.pro.reconnect.fr pro.reconnect.social www.pro.reconnect.social"
     filename: "pro.conf"
     root: "/var/www/pro/current/public"
     state: "present"
