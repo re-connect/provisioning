@@ -1,0 +1,8 @@
+---
+- name: Create a templated .env.
+  template:
+    src: "{{ dotenv_file_template }}"
+    dest: "{{ dotenv_file_path }}"
+    owner: www-data
+    group: www-data
+  when: site_name is defined and dotenv_file_template is defined

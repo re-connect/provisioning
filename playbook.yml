@@ -21,4 +21,5 @@
     - roles/www-data
     - roles/imagick
     - roles/gitlab
+    - roles/dotenv-file
     - roles/ssh-key
