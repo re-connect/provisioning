@@ -64,3 +64,10 @@ You can then test if your setup is working, and if you find no problem, you can 
 * When all (or most of ) DNS are switched to the new IP, login to your server as `root` trigger SSL certificates generation `certbot --nginx`.
 * When you are asked, anwser `(2) Redirect` to generate Nginx configuration to handle http->https redirection
 * ‼️‼️ This setup does not include how to handle buckets, if you follow this, point to the old buckets if they exist ‼️‼️
+
+## TODO
+
+This section handles the things I would like to add to this repo to make it really better
+
+* Add a role to handle generation of the `.env` file.
+* Print the generated SSH key in Ansible output
