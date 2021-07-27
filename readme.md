@@ -16,7 +16,7 @@ You will **need the Ansible Vault password** to get it running, ask it from a te
 To run the provisioning, create the file `.vault_pass` and then fill it with the vault password, then, run:
 
 ```bash
-ansible-playbook -i envs/{website} --limit '{environment}' playbook.yml --ask-vault-pass
+ansible-playbook -i sitess/{website} --limit '{environment}' playbook.yml --ask-vault-pass
 ```
 
 Available websites are :
@@ -28,7 +28,7 @@ Available environments are :
 * prod
 
 ```bash
-ansible-playbook -i envs/{website} --limit '{environment}' --vault-password-file=.vault_pass
+ansible-playbook -i sites/{website} --limit '{environment}' playbook.yml --vault-password-file=.vault_pass
 ```
 
 ## What is inside ?
@@ -48,8 +48,8 @@ To deploy a Symfony app, you need a few things setup before, such as EasyDeployB
 
 * ‼️‼️ If you plan to switch a DNS to another DNS, update its TTL to 300 at least one day before ‼️‼️
 * Spawn a Debian 10 machine in the Cloud, and be sure you have SSH access as a `root` user to the machine, and get its IP address `{ip}`
-* Fill its IP address in the `envs/{website}/{env}/hosts` file corresponding to `{website}` and `{env}` you want to deploy (for example `envs/pro/preprod/hosts`)
-* Launch the provisioning: `ansible-playbook -i envs/{website} --limit'{environment}' --vault-password-file=.vault_pass`
+* Fill its IP address in the `sites/{website}/{env}/hosts` file corresponding to `{website}` and `{env}` you want to deploy (for example `envs/pro/preprod/hosts`)
+* Launch the provisioning: `ansible-playbook -i sites/{website} --limit '{environment}' playbook.yml --vault-password-file=.vault_pass`
 * At the end of the provisioning, it should output the generated SSH key (something like `    "msg": "{ssh_key_content}"`)
 * Paste this SSH key as a new item inside the `Settings/Repository/Deploy Keys` menu on gitlab
 * SSH to the server as `www-data` and load it in the database running `mysql -u{db_user} {db_name} -p < ./dump.sql` and filling `{db_password}` when prompted
