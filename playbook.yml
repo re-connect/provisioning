@@ -3,7 +3,6 @@
   vars_files:
     - vars/all.yml
   roles:  
-    - roles/ghostscript
     - library/geerlingguy.git
     - library/geerlingguy.php-versions
     - library/geerlingguy.mysql
@@ -15,6 +14,7 @@
     - library/geerlingguy.certbot
     - library/geerlingguy.nodejs
     - library/oefenweb.yarn
+    - roles/ghostscript
     - roles/python-certbot-nginx
     - roles/www-data
     - roles/imagick
