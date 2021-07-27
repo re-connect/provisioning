@@ -1,6 +1,5 @@
 ansible_python_interpreter: python3
 ansible_ssh_user: root
-certbot_auto_renew: false
 nginx_remove_default_vhost: true
 php_date_timezone: Europe/Paris
 php_enable_php_fpm: true
