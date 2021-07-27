@@ -3,6 +3,8 @@
   file:
     path: "{{ dotenv_file_location }}"
     state: directory
+    owner: www-data
+    group: www-data
 
 - name: Create a templated .env.
   template:
