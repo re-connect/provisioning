@@ -20,8 +20,10 @@ ansible-playbook -i sitess/{website} --limit '{environment}' playbook.yml --ask-
 ```
 
 Available websites are :
-* pro
-* vault
+* pro (prod/preprod)
+* vault (prod/preprod)
+* ferme (prod)
+* mpp (prod)
 
 Available environments are :
 * preprod

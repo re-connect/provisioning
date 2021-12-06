@@ -4,5 +4,5 @@ nginx_remove_default_vhost: true
 php_date_timezone: Europe/Paris
 php_enable_php_fpm: true
 php_enable_webserver: false
-php_memory_limit: "1024M"
+php_memory_limit: "256M"
 php_packages_state: latest
