@@ -3,11 +3,14 @@
   vars_files:
     - vars/all.yml
   roles:  
+    - library/weareinteractive.sudo
     - library/geerlingguy.git
     - library/geerlingguy.php-versions
     - library/geerlingguy.mysql
+    - library/geerlingguy.postgresql
     - library/geerlingguy.php
     - library/geerlingguy.php-mysql
+    - library/geerlingguy.php-pgsql
     - library/manala.cron
     - library/geerlingguy.nginx
     - library/geerlingguy.composer

@@ -1,8 +1,11 @@
 roles:
   - geerlingguy.git
+  - weareinteractive.sudo
   - manala.make
   - geerlingguy.php
   - geerlingguy.php-versions
+  - geerlingguy.postgresql
+  - geerlingguy.php-pgsql
   - geerlingguy.mysql
   - geerlingguy.php-mysql
   - manala.cron
