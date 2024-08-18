@@ -1,0 +1,18 @@
+---
+php_version: '8.3'
+site_name: {{site_name}
+php_packages_extra:
+  - php-zip
+  - php-intl
+  - php-imagick
+minio_buckets:
+  - name: {{site_name}}
+    policy: read-write
+minio_root_user: minio-root
+minio_root_password: {{minio_root_password}}
+minio_users:
+- name: www-data
+  password: {{minio_www_data_password}}
+  buckets_acl:
+    - name: {{site_name}}
+      policy: read-write
