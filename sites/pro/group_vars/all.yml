@@ -1,8 +1,0 @@
----
-php_version: '8.0'
-site_name: pro
-php_memory_limit: "512M"
-php_packages_extra:
-  - php-zip
-  - php-intl
-  - php-imagick

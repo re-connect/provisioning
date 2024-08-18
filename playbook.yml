@@ -3,6 +3,8 @@
   vars_files:
     - vars/all.yml
   roles:  
+    - roles/python-is-python3
+    - roles/www-data
     - library/weareinteractive.sudo
     - library/geerlingguy.git
     - library/geerlingguy.php-versions
@@ -17,10 +19,10 @@
     - library/geerlingguy.certbot
     - library/geerlingguy.nodejs
     - library/oefenweb.yarn
+    - library/ricsanfre.minio
+    - roles/acl
     - roles/ghostscript
-    - roles/python-certbot-nginx
-    - roles/www-data
+    # - roles/python-certbot-nginx
     - roles/imagick
-    - roles/gitlab
     - roles/dotenv-file
     - roles/ssh-key

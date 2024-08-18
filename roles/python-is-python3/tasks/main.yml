@@ -1,0 +1,9 @@
+---
+- name: Installs python-is-python3
+  package:
+    name: python-is-python3
+    state: present
+- name: Remove externally manaed python3 libraries
+  ansible.builtin.file:
+    state: absent
+    path: /usr/lib/python3.*/EXTERNALLY-MANAGED

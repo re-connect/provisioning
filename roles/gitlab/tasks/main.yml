@@ -1,9 +1,0 @@
----
-- lineinfile:
-    dest: /var/www/.ssh/known_hosts
-    create: yes
-    state: present
-    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa gitlab.com') }}"
-    owner: www-data
-    group: www-data
-    regexp: "^gitlab\\.com"

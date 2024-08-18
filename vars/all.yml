@@ -1,8 +1,13 @@
 ansible_python_interpreter: python3
 ansible_ssh_user: root
+nodejs_version: "20.x"
 nginx_remove_default_vhost: true
 php_date_timezone: Europe/Paris
 php_enable_php_fpm: true
 php_enable_webserver: false
 php_memory_limit: "256M"
 php_packages_state: latest
+minio_buckets:
+  - name: gjaune
+    policy: read-write
+    object_lock: false

@@ -1,6 +1,0 @@
----
-php_version: '8.0'
-site_name: mpp
-php_packages_extra:
-  - php-zip
-  - php-intl

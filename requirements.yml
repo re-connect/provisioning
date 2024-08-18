@@ -13,5 +13,6 @@ roles:
   - geerlingguy.composer
   - geerlingguy.certbot
   - geerlingguy.nodejs
+  - ricsanfre.minio
   - oefenweb.yarn
   - kh-eek.ghostscript
