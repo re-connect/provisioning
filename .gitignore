@@ -1,2 +1,4 @@
 .vault_pass
 library/*
+sites/*
+templates/.env.*.prod

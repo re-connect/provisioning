@@ -8,6 +8,8 @@ php_enable_webserver: false
 php_memory_limit: "256M"
 php_packages_state: latest
 minio_buckets:
-  - name: gjaune
+  - name: lerondpoint
     policy: read-write
     object_lock: false
+minio_server_port: "9001"
+minio_console_port: "9002"

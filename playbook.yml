@@ -5,6 +5,7 @@
   roles:  
     - roles/python-is-python3
     - roles/www-data
+    - roles/ssh-key
     - library/weareinteractive.sudo
     - library/geerlingguy.git
     - library/geerlingguy.php-versions
@@ -25,4 +26,3 @@
     # - roles/python-certbot-nginx
     - roles/imagick
     - roles/dotenv-file
-    - roles/ssh-key

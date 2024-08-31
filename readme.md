@@ -48,6 +48,17 @@ ansible-playbook -i sites/{website} --limit '{environment}' playbook.yml --vault
 
 To deploy a Symfony app, you need a few things setup before, such as EasyDeployBundle, and an access to the project on gitlab
 
+* There could be an error within the minio role
+```
+TASK [library/ricsanfre.minio : Get the Minio server checksum for architecture amd64] ****************************************************************************************
+objc[11047]: +[__NSCFConstantString initialize] may have been in progress in another thread when fork() was called.
+objc[11047]: +[__NSCFConstantString initialize] may have been in progress in another thread when fork() was called. We cannot safely call it or ignore it in the fork() child process. Crashing instead. Set a breakpoint on objc_initializeAfterForkError to debug.
+```
+* This is an issue with ansible, you should export this variable before retrying
+```
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+```
+
 * ‼️‼️ If you plan to switch a DNS to another DNS, update its TTL to 300 at least one day before ‼️‼️
 * Spawn a Debian 10 machine in the Cloud, and be sure you have SSH access as a `root` user to the machine, and get its IP address `{ip}`
 * Fill its IP address in the `sites/{website}/{env}/hosts` file corresponding to `{website}` and `{env}` you want to deploy (for example `envs/pro/preprod/hosts`)
